@@ -11,13 +11,13 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import joblib
 
-
+from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import classification_report
 from sklearn import metrics
 
 
-modelscorev2 = joblib.load('FPL-KNN.pkl' , mmap_mode ='r+')
+modelscorev2 = joblib.load('FPL-Lin.pkl' , mmap_mode ='r+')
 
 st.header("Welcome to FPL Expert Advisor")
 
