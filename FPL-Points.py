@@ -1,9 +1,9 @@
 # pip install sklearn
-import sys
+# import sys
 
-if 'sklearn' not in sys.modules:
-    print('Installing sklearn...')
-    pip install scikit-learn
+# if 'sklearn' not in sys.modules:
+#     print('Installing sklearn...')
+#     pip install scikit-learn
 
 import streamlit as st
 import pandas as pd
