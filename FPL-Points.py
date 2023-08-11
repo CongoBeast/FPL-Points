@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import joblib
 
 
-modelscorev2 = joblib.load('FPL-KNN.pkl' , mmap_mode ='r')
+modelscorev2 = joblib.load('FPL-KNN.pkl' , mmap_mode ='r+')
 
 st.header("Welcome to FPL Expert Advisor")
 
