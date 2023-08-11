@@ -73,31 +73,33 @@ def user_input():
         
         StartingValue = st.number_input('Type current starting price' , key="StartVal")
 
-        data = {'Position': Position,
-            'Minutes PLayed': Minutes,
-            'Goals Scored': Goals,
-            'Assists': Assists,
-            'Clean Sheets': CleanSheets,
-            'Goals Conceded': GoalsConceded,
-            'Own Goal': OwnGoals,
-            'Penalty Scored': PenaltyScored,
-            'Penalties Missed': PenaltyMissed,
-            'Yellow Cards': YellowCards,
-            'Red Cards': RedCards,
-            'Saves': Saves,
-            'Bonus Points': BonusPoints,
-            'Bonus Points System': BonusPointsSystem,
-            'Influence': Influence,
-            'Creativity': Creativity,
-            'Threat': Threat,
-            'ICT Index': ICTIndex,
-            'Starting Value': StartingValue
+        data = {'Position': int(Position),
+            'Minutes PLayed': int(Minutes),
+            'Goals Scored': int(Goals),
+            'Assists': int(Assists),
+            'Clean Sheets': int(CleanSheets),
+            'Goals Conceded': int(GoalsConceded),
+            'Own Goal': int(OwnGoals),
+            'Penalty Scored': int(PenaltyScored),
+            'Penalties Missed': int(PenaltyMissed),
+            'Yellow Cards': int(YellowCards),
+            'Red Cards': int(RedCards),
+            'Saves': int(Saves),
+            'Bonus Points': int(BonusPoints),
+            'Bonus Points System': int(BonusPointsSystem),
+            'Influence': int(Influence),
+            'Creativity': int(Creativity),
+            'Threat': int(Threat),
+            'ICT Index': int(ICTIndex),
+            'Starting Value': int(StartingValue)
             }
         features = pd.DataFrame(data, index=[0])
         return features
 
 
 df = user_input()
+
+df.fillna(1, inplace=True)
 
 st.subheader('User Input parameters')
 st.write(df)
