@@ -7,9 +7,14 @@
 
 import streamlit as st
 import pandas as pd
-from sklearn import neighbors
+# from sklearn import neighbors
 import matplotlib.pyplot as plt 
 import joblib
+
+
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.metrics import classification_report
+from sklearn import metrics
 
 
 modelscorev2 = joblib.load('FPL-KNN.pkl' , mmap_mode ='r+')
