@@ -32,41 +32,41 @@ def user_input():
         elif Position_string == "FW":
             Position = 3
 
-        Minutes = st.number_input('Type Minutes Played')
+        Minutes = st.number_input('Type Minutes Played' , key="mins")
 
         Goals = st.slider("Slide to select number of goals" , 0 , 40)
 
         Assists = st.slider("Slide to select number of assists" , 0 , 30)
 										
-        CleanSheets = st.number_input('Type number of ')
+        CleanSheets = st.number_input('Type number of ' , key="CS")
 
-        GoalsConceded = st.number_input('Type number of ')
+        GoalsConceded = st.number_input('Type number of ' , key="GoalsConceded")
 
-        OwnGoals = st.number_input('Type number of ')
+        OwnGoals = st.number_input('Type number of ' , key="OwnGoals" )
 
-        PenaltyScored = st.number_input('Type number of ')
+        PenaltyScored = st.number_input('Type number of ' , key="PenaGoals")
 
-        PenaltyMissed = st.number_input('Type number of ')
+        PenaltyMissed = st.number_input('Type number of ' , key="PenaMiss")
 
-        YellowCards = st.number_input('Type number of Yellow Cards')
+        YellowCards = st.number_input('Type number of Yellow Cards' , key="Yellows")
 
-        RedCards = st.number_input('Type number of Red Cards')
+        RedCards = st.number_input('Type number of Red Cards' , key="RedCards")
         
-        Saves = st.number_input('Type number of Saves ')
+        Saves = st.number_input('Type number of Saves ' , key="saves")
         
-        BonusPoints = st.number_input('Type FPL Bonus Points System Index')
+        BonusPoints = st.number_input('Type FPL Bonus Points System Index'  , key="BonusPts")
 
-        BonusPointsSystem = st.number_input('Type FPL Bonus Points System Index')
+        BonusPointsSystem = st.number_input('Type FPL Bonus Points System Index' , key="BonusSys")
         
-        Influence = st.number_input('Type FPL Threat Index')
+        Influence = st.number_input('Type FPL Threat Index' , key="Influence")
         
-        Creativity = st.number_input('Type FPL Creativity Index')
+        Creativity = st.number_input('Type FPL Creativity Index' , key="Creativity")
         
-        Threat = st.number_input('Type FPL Threat Index')
+        Threat = st.number_input('Type FPL Threat Index' , key="Threat")
 
-        ICTIndex = st.number_input('Type FPL ICT Index')
+        ICTIndex = st.number_input('Type FPL ICT Index' , key="ICT")
         
-        StartingValue = st.number_input('Type current starting price')
+        StartingValue = st.number_input('Type current starting price' , key="StartVal")
 
         data = {'Position': Position,
             'Minutes PLayed': Minutes,
